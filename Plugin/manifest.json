@@ -1,0 +1,20 @@
+{
+    "name" : "TOC Attendance App",
+    "manifest_version": 2,
+    "version" :  "1.0",
+    "content_scripts" : [
+        {
+            "matches": ["https://meet.google.com/*"],
+            "js":["tabswitch.js"]
+        }
+    ],
+    "browser_action": {
+        "default_popup": "popup.html",
+        "default_title": "TOC Attendance App"
+    },
+    "background": {
+        "page": "background.html",
+        "persistent": false
+    },
+    "content_security_policy": "script-src 'self' https://www.gstatic.com/ https://*.firebaseio.com https://www.googleapis.com; object-src 'self'"
+}
