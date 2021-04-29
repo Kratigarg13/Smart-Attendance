@@ -1,0 +1,16 @@
+{
+    "name" : "Smart Attendance App : Computer Network",
+    "manifest_version": 2,
+    "version" :  "1.0",
+    "content_scripts" : [
+        {
+            "matches": ["https://meet.google.com/*"],
+            "js":["tabswitch2.js"]
+        }
+    ],
+    "browser_action": {
+        "default_popup": "popup.html",
+        "default_title": "Computer Network Project"
+    },
+    "content_security_policy": "script-src 'self' https://www.gstatic.com/ https://*.firebaseio.com https://www.googleapis.com; object-src 'self'"
+}
